@@ -175,8 +175,8 @@ const NAV_ITEMS: NavItem[] = [
     href: "#",
   },
   {
-    label: "Browse Neighborhoods",
-    href: "",
+    label: "Mortgage Calculator",
+    href: "#",
   },
 ];
 
