@@ -1,4 +1,4 @@
-import { SearchIcon } from "@chakra-ui/icons";
+import { MdSearch } from "react-icons/md";
 import {
   Box,
   Heading,
@@ -8,7 +8,6 @@ import {
   InputRightElement,
   Stack,
 } from "@chakra-ui/react";
-import React from "react";
 
 const Hero = () => {
   return (
@@ -55,7 +54,7 @@ const Hero = () => {
                 colorScheme={"blue"}
                 size="lg"
                 onClick={() => {}}
-                icon={<SearchIcon />}
+                icon={<MdSearch fontSize={"28px"} />}
               />
             </InputRightElement>
           </InputGroup>

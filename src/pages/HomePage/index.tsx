@@ -1,8 +1,9 @@
 import { Container } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
-import HomeCTA from "../../components/CTA/HomeCTA";
+import HomeCTA from "../../components/CTA/QuickCTA";
 import Hero from "../../components/Hero";
 import Testimonial from "../../components/Testimonial";
+import { homeCtas } from "../../data";
 // import ListingCarousel from "../../components/carousel/ListingCarousel";
 
 const HomePage = () => {
@@ -10,10 +11,10 @@ const HomePage = () => {
     <>
       <Hero />
       {/* <ListingCarousel /> */}
-
       <Container maxW="container.xl" pt={10}>
-        <HomeCTA />
-
+        {homeCtas.map((cta) => (
+          <HomeCTA key={cta.link} {...cta} />
+        ))}
         <Testimonial />
       </Container>
     </>

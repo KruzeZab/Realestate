@@ -11,7 +11,7 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { MdMenu, MdClose } from "react-icons/md";
 
 const Header = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -37,7 +37,11 @@ const Header = () => {
           <IconButton
             onClick={onToggle}
             icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              isOpen ? (
+                <MdClose fontSize={"24px"} />
+              ) : (
+                <MdMenu fontSize={"24px"} />
+              )
             }
             variant="ghost"
             aria-label="Toggle Navigation"
