@@ -31,7 +31,8 @@ const Testimonial = () => {
                 <Stack direction={"row"}>
                   <Avatar
                     src={test.avatar}
-                    size={"lg"}
+                    w={"55px"}
+                    h={"55px"}
                     position="absolute"
                     top={0}
                     left={"50%"}

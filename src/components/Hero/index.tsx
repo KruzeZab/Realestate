@@ -39,15 +39,16 @@ const Hero = () => {
           <InputGroup size="lg">
             <Input
               borderRadius={"4rem"}
-              fontSize="21px"
-              height="60px"
+              fontSize="18px"
+              height="52px"
               pr="4.5rem"
+              pl={"1.5rem"}
               type="text"
               placeholder="Search neighbourhood, address, city, etc."
               bg="white"
               w={"100%"}
             />
-            <InputRightElement width="3.5rem" h={"3.8rem"} mr={1}>
+            <InputRightElement width="3.5rem" h={"3.3rem"}>
               <IconButton
                 aria-label="search properties"
                 isRound
