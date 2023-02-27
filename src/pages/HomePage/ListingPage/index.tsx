@@ -9,15 +9,6 @@ const ListingPage = () => {
         <Listing />
         <Listing />
         <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
       </SimpleGrid>
     </Container>
   );

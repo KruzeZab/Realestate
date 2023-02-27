@@ -25,7 +25,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 
 const Footer = () => {
   return (
-    <Box borderTop={"1px solid"} borderColor="gray.100" mt={20}>
+    <Box borderTop={"1px solid"} borderColor="gray.100">
       <Container as={Stack} maxW="6xl" py={10}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={"flex-start"}>

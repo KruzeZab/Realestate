@@ -10,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-interface HomeCTAProps {
+interface QuickCTAProps {
   link: string;
   image: string;
   title: string;
@@ -18,14 +18,13 @@ interface HomeCTAProps {
   btnText: string;
 }
 
-const HomeCTA = (cta: HomeCTAProps) => {
+const QuickCTA = (cta: QuickCTAProps) => {
   const { image, title, description, btnText } = cta;
 
   return (
     <>
       <Card
         border={0}
-        mb={5}
         direction={{ base: "column", sm: "row" }}
         overflow="hidden"
         variant="outline"
@@ -54,7 +53,7 @@ const HomeCTA = (cta: HomeCTAProps) => {
   );
 };
 
-HomeCTA.propTypes = {
+QuickCTA.propTypes = {
   link: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -62,4 +61,4 @@ HomeCTA.propTypes = {
   btnText: PropTypes.string.isRequired,
 };
 
-export default HomeCTA;
+export default QuickCTA;
