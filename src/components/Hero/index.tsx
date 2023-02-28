@@ -25,12 +25,12 @@ const Hero = () => {
       bgRepeat={"no-repeat"}
       minHeight={"60vh"}
     >
-      <Box flex={1} maxW={["80%", "70%", "65%", "60%", "45%"]}>
+      <Box flex={1} maxW={["80%", "70%", "65%", "60%", "50%"]}>
         <Box mb={6} textAlign={"center"}>
-          <Heading color="white" size="3xl" mb={6}>
+          <Heading color="white" size={{ base: "2xl", xl: "3xl" }} mb={6}>
             Find your perfect home
           </Heading>
-          <Heading color="white" size="xl">
+          <Heading color="white" size={{ base: "lg", xl: "xl" }}>
             We&apos;ll do the work for you
           </Heading>
         </Box>

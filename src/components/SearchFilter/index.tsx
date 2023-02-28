@@ -14,12 +14,14 @@ import {
 } from "@chakra-ui/react";
 import { MdArrowDropDown, MdSearch } from "react-icons/md";
 import FilterDrawer from "../drawer/FilterDrawer";
-import BathFilter from "../filters/BathFilter";
-import BedFilter from "../filters/BedFilter";
-import GarageFilter from "../filters/GarageFilter";
-import LotFilter from "../filters/LotFilter";
-import MoreFilter from "../filters/MoreFilter";
-import PriceFilter from "../filters/PriceFilter";
+import {
+  BathFilter,
+  BedFilter,
+  GarageFilter,
+  LotFilter,
+  MoreFilter,
+  PriceFilter,
+} from "../filters";
 
 const SearchFilter = () => {
   return (

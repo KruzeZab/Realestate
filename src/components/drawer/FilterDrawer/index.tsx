@@ -1,17 +1,18 @@
 import {
+  Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  HStack,
   IconButton,
   useDisclosure,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { MdFilterAlt } from "react-icons/md";
 import MoreFilter from "../../filters/MoreFilter";
-// import MoreFilter from "../../filters/MoreFilter";
 
 const FilterDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -41,6 +42,12 @@ const FilterDrawer = () => {
 
           <DrawerBody p={0}>
             <MoreFilter />
+            <HStack px={3} pt={3} spacing={4}>
+              <Button onClick={onClose} variant="solid" colorScheme={"blue"}>
+                Apply
+              </Button>
+              <Button onClick={onClose}>Reset</Button>
+            </HStack>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
