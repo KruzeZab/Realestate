@@ -1,16 +1,27 @@
-import { Container, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, SimpleGrid } from "@chakra-ui/react";
 import Listing from "../../../components/Listing";
+import SearchFilter from "../../../components/SearchFilter";
 
 const ListingPage = () => {
   return (
-    <Container maxW="container.2xl" pt={10}>
-      <SimpleGrid minChildWidth={"300px"} spacing="20px">
-        <Listing />
-        <Listing />
-        <Listing />
-        <Listing />
-      </SimpleGrid>
-    </Container>
+    <>
+      <Container maxW="container.2xl">
+        <Box pb={4} pt={3}>
+          <SearchFilter />
+        </Box>
+        <Box>
+          <SimpleGrid minChildWidth={"350px"} spacing="20px">
+            <Listing />
+            <Listing />
+            <Listing />
+            <Listing />
+            <Listing />
+            <Listing />
+            <Listing />
+          </SimpleGrid>
+        </Box>
+      </Container>
+    </>
   );
 };
 
