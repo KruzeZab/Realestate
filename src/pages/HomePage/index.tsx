@@ -1,5 +1,6 @@
 import { Box, Container, Heading, SimpleGrid } from "@chakra-ui/react";
-import "slick-carousel/slick/slick.css";
+
+import ListingCarousel from "../../components/carousel/ListingCarousel";
 import QuickCTA from "../../components/CTA/QuickCTA";
 import Hero from "../../components/Hero";
 import Listing from "../../components/Listing";
@@ -14,6 +15,7 @@ const HomePage = () => {
       </Box>
       <Container maxW="container.xl">
         {/* Listings */}
+        <ListingCarousel />
         <Box mb={5}>
           <Heading textAlign={"center"} size="xl" mb={5}>
             Browse houses near you

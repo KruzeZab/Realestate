@@ -34,7 +34,7 @@ const Hero = () => {
             We&apos;ll do the work for you
           </Heading>
         </Box>
-        <Box w={{ sm: "90%", md: "95%", lg: "90%", xl: "85%" }} m={"0 auto"}>
+        <Box w={{ sm: "90%", md: "95%", lg: "90%", xl: "75%" }} m={"0 auto"}>
           <InputGroup size="lg">
             <Input
               borderRadius={"4rem"}

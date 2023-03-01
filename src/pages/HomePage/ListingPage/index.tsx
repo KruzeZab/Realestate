@@ -5,7 +5,7 @@ import SearchFilter from "../../../components/SearchFilter";
 const ListingPage = () => {
   return (
     <>
-      <Container maxW="container.2xl">
+      <Container maxW="container.2xl" mb={10}>
         <Box pb={4} pt={3}>
           <SearchFilter />
         </Box>
