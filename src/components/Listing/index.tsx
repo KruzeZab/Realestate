@@ -38,7 +38,7 @@ const Listing = () => {
 
         <Image
           src="https://loremflickr.com/320/240/home-for-sale"
-          height={"200px"}
+          height={"260px"}
         />
         <CardBody px={2} py={2}>
           {/* Price */}

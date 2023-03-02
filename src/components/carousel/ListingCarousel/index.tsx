@@ -1,12 +1,11 @@
-import { Box, IconButton } from "@chakra-ui/react";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { Box } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Listing from "../../Listing";
+import { LeftArrow, RightArrow } from "../NavButton";
 
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 4,
     partialVisibilityGutter: 30,
@@ -28,46 +27,16 @@ const responsive = {
   },
 };
 
-const LeftArrow = ({ onClick, ...rest }: any) => {
-  // onMove means if dragging or swiping in progress.
-  return (
-    <IconButton
-      display={{ base: "none", md: "flex" }}
-      isRound
-      aria-label="previous listing carousel"
-      icon={<MdArrowBackIos />}
-      position="absolute"
-      colorScheme={"blue"}
-      onClick={onClick}
-    />
-  );
-};
-
-const RightArrow = ({ onClick, ...rest }: any) => {
-  // onMove means if dragging or swiping in progress.
-  return (
-    <IconButton
-      display={{ base: "none", md: "flex" }}
-      isRound
-      aria-label="previous listing carousel"
-      icon={<MdArrowForwardIos />}
-      position="absolute"
-      right="0"
-      colorScheme={"blue"}
-      onClick={onClick}
-    />
-  );
-};
-
 const ListingCarousel = () => {
   return (
     <Carousel
       responsive={responsive}
       customLeftArrow={<LeftArrow />}
       customRightArrow={<RightArrow />}
+      removeArrowOnDeviceType={["tablet", "mobile"]}
       partialVisbile
     >
-      <Box pr={4}>
+      <Box pr={4} pb={1}>
         <Listing />
       </Box>
       <Box pr={4}>
