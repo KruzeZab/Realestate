@@ -43,21 +43,22 @@ const RealtorInfo = () => {
     <Box border="1px solid #cdcdcd" p={4} borderRadius={4}>
       <Box textAlign={"center"}>
         <Heading as="h3" size="md" mb={4}>
-          More about this property
+          Realtor Information
         </Heading>
         <Avatar
           size="xl"
           name="Kent Dodds"
           src="https://bit.ly/kent-c-dodds"
-          mb={1}
+          mb={2}
         />
         <Link
           to="/agent"
           display="block"
           as={RouterLink}
-          size="sm"
+          fontSize="xl"
           fontWeight={"medium"}
           color="blue.600"
+          mb={1}
         >
           Tony Calimlim
         </Link>

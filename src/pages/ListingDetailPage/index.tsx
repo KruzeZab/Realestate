@@ -4,17 +4,28 @@ import {
   Container,
   Grid,
   GridItem,
-  Heading,
   HStack,
+  Image,
   Link,
   SimpleGrid,
   Tag,
   Text,
 } from "@chakra-ui/react";
-import { MdCalendarToday } from "react-icons/md";
+import { RiHome2Line } from "react-icons/ri";
+import { AiOutlineCalendar } from "react-icons/ai";
+import { TiChartAreaOutline } from "react-icons/ti";
+import {
+  MdOutlineBed,
+  MdOutlineShower,
+  MdOutlineDirectionsCar,
+} from "react-icons/md";
 
 import ImageCarousel from "../../components/carousel/ImageCarousel";
-import RealtorInfo from "./RealtorInfo";
+
+import ListingDescription from "./renders/ListingDescription";
+import ListingFeature from "./renders/ListingFeature";
+import ListingMap from "./renders/ListingMap";
+import RealtorInfo from "./renders/RealtorInfo";
 
 const ListingDetailPage = () => {
   return (
@@ -30,142 +41,58 @@ const ListingDetailPage = () => {
       <Tag colorScheme={"green"} my={2} fontWeight="bold">
         For Sale
       </Tag>
-      <Grid templateColumns="repeat(6, 1fr)" gap={6}>
+      <Grid templateColumns="repeat(6, 1fr)" gap={6} mb={5}>
         <GridItem colSpan={{ base: 6, lg: 4 }}>
-          <Box mb={10}>
+          <Box mb={8}>
             <ImageCarousel />
           </Box>
-          <Grid templateColumns="repeat(6, 1fr)" gap={6}>
-            <GridItem colSpan={5}>
-              <Box>
-                <HStack alignItems={"center"} mb={3}>
-                  <Box
-                    w={4}
-                    h={4}
-                    bg="green.600"
-                    display="inline-block"
-                    borderRadius={4}
-                  />
-                  <Text fontSize={"md"}> For Sale</Text>
-                </HStack>
-                <Heading as="h3" size="lg" mb={4}>
-                  $499,528
-                </Heading>
-                <HStack spacing={3} mb={4}>
-                  <Text fontSize="md" color="gray.800">
-                    <Text as="span" fontWeight={"bold"}>
-                      3
-                    </Text>{" "}
-                    Beds
-                  </Text>
-                  <Text fontSize="md" color="gray.800">
-                    <Text as="span" fontWeight={"bold"}>
-                      2
-                    </Text>{" "}
-                    Beds
-                  </Text>
-                  <Text fontSize="md" color="gray.800">
-                    <Text as="span" fontWeight={"bold"}>
-                      1,240
-                    </Text>{" "}
-                    sqft
-                  </Text>
-                  <Text fontSize="md" color="gray.800">
-                    <Text as="span" fontWeight={"bold"}>
-                      0.23
-                    </Text>{" "}
-                    Acre lot
-                  </Text>
-                </HStack>
-                {/* Address */}
-                <Text fontSize="md" color="gray.800" mb={6}>
-                  13421 Gershwin Ln, Port Charlotte, FL 33981
-                </Text>
+          <Grid templateColumns="repeat(6, 1fr)">
+            <GridItem colSpan={{ base: 6, md: 4 }}>
+              <ListingDescription />
+            </GridItem>
+            <GridItem colSpan={{ base: 6, md: 2 }}>
+              <Box bg="red" mb={5}>
+                <ListingMap />
               </Box>
             </GridItem>
-
-            <Box>asd</Box>
           </Grid>
-          <SimpleGrid mb={8} columns={3} spacing={6}>
-            <HStack>
-              <Box>
-                <Box p={2}>
-                  <MdCalendarToday fontSize={"21px"} />
-                </Box>
-              </Box>
-              <Box>
-                <Text fontWeight={"bold"}>Single Family</Text>
-                <Text fontSize={"14px"} color="gray.500">
-                  Property Type
-                </Text>
-              </Box>
-            </HStack>
+          <SimpleGrid mb={8} columns={{ base: 1, sm: 2, lg: 3 }} spacing={6}>
+            <ListingFeature
+              icon={<RiHome2Line fontSize={"21px"} />}
+              title="Single Family"
+              text=" Property Type"
+            />
+            <ListingFeature
+              icon={<AiOutlineCalendar fontSize={"24px"} />}
+              title="77 Days"
+              text="Time on Market"
+            />
+            <ListingFeature
+              icon={<MdOutlineDirectionsCar fontSize={"24px"} />}
+              title="2 Cars"
+              text=" Garage"
+            />
+            <ListingFeature
+              icon={<TiChartAreaOutline fontSize={"24px"} />}
+              title="1425"
+              text="Square Feet"
+            />
+            <ListingFeature
+              icon={<MdOutlineBed fontSize={"24px"} />}
+              title="3 Beds"
+              text="Bedrooms"
+            />
 
             <HStack>
               <Box>
                 <Box p={2}>
-                  <MdCalendarToday fontSize={"21px"} />
+                  <MdOutlineShower fontSize={"24px"} />
                 </Box>
               </Box>
               <Box>
-                <Text fontWeight={"bold"}>Single Family</Text>
+                <Text fontWeight={"bold"}>3 Baths</Text>
                 <Text fontSize={"14px"} color="gray.500">
-                  Property Type
-                </Text>
-              </Box>
-            </HStack>
-
-            <HStack>
-              <Box>
-                <Box p={2}>
-                  <MdCalendarToday fontSize={"21px"} />
-                </Box>
-              </Box>
-              <Box>
-                <Text fontWeight={"bold"}>Single Family</Text>
-                <Text fontSize={"14px"} color="gray.500">
-                  Property Type
-                </Text>
-              </Box>
-            </HStack>
-            <HStack>
-              <Box>
-                <Box p={2}>
-                  <MdCalendarToday fontSize={"21px"} />
-                </Box>
-              </Box>
-              <Box>
-                <Text fontWeight={"bold"}>Single Family</Text>
-                <Text fontSize={"14px"} color="gray.500">
-                  Property Type
-                </Text>
-              </Box>
-            </HStack>
-
-            <HStack>
-              <Box>
-                <Box p={2}>
-                  <MdCalendarToday fontSize={"21px"} />
-                </Box>
-              </Box>
-              <Box>
-                <Text fontWeight={"bold"}>Single Family</Text>
-                <Text fontSize={"14px"} color="gray.500">
-                  Property Type
-                </Text>
-              </Box>
-            </HStack>
-
-            <HStack>
-              <Box>
-                <Box p={2}>
-                  <MdCalendarToday fontSize={"21px"} />
-                </Box>
-              </Box>
-              <Box>
-                <Text fontWeight={"bold"}>Single Family</Text>
-                <Text fontSize={"14px"} color="gray.500">
-                  Property Type
+                  Bathrooms
                 </Text>
               </Box>
             </HStack>
@@ -181,10 +108,67 @@ const ListingDetailPage = () => {
             </Button>
           </Box>
           <Box mb={4}>
-            <Link color={"blue.600"}>Interested? Send a quotation today.</Link>
+            <Link color={"blue"}>Interested? Send a quotation today.</Link>
           </Box>
-          {/* Accordion goes here */}
-          asd
+          <Text mb={4}>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Perferendis quod dolorum tempore vero adipisci harum laboriosam. Sed
+            similique eligendi illum unde impedit in debitis voluptatibus, optio
+            sequi ad alias tempore! Vitae natus excepturi ullam in molestias
+            quidem error dolor asperiores neque sequi alias obcaecati velit sed,
+            voluptates rem eveniet, sit fugit et incidunt hic corporis sint
+            illum possimus. Illum, temporibus? Tempore aut officiis quibusdam,
+            placeat suscipit aperiam, ipsa necessitatibus obcaecati at similique
+            ea soluta itaque! Consequuntur aperiam unde corporis, velit ut id
+            voluptatem eveniet eius tenetur quis provident. Dolores, animi.
+          </Text>
+          <Text mb={4}>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Perferendis quod dolorum tempore vero adipisci harum laboriosam. Sed
+            similique eligendi illum unde impedit in debitis voluptatibus, optio
+            sequi ad alias tempore! Vitae natus excepturi ullam in molestias
+            quidem error dolor asperiores neque sequi alias obcaecati velit sed,
+            voluptates rem eveniet, sit fugit et incidunt hic corporis sint
+            illum possimus. Illum, temporibus? Tempore aut officiis quibusdam,
+            placeat suscipit aperiam, ipsa necessitatibus obcaecati at similique
+            ea soluta itaque! Consequuntur aperiam unde corporis, velit ut id
+            voluptatem eveniet eius tenetur quis provident. Dolores, animi.
+          </Text>
+          <Text mb={4}>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Perferendis quod dolorum tempore vero adipisci harum laboriosam. Sed
+            similique eligendi illum unde impedit in debitis voluptatibus, optio
+            sequi ad alias tempore! Vitae natus excepturi ullam in molestias
+            quidem error dolor asperiores neque sequi alias obcaecati velit sed,
+            voluptates rem eveniet, sit fugit et incidunt hic corporis sint
+            illum possimus. Illum, temporibus? Tempore aut officiis quibusdam,
+            placeat suscipit aperiam, ipsa necessitatibus obcaecati at similique
+            ea soluta itaque! Consequuntur aperiam unde corporis, velit ut id
+            voluptatem eveniet eius tenetur quis provident. Dolores, animi.
+          </Text>
+          <SimpleGrid minChildWidth={"200px"} spacing={5}>
+            <Box>
+              <Image src="https://picsum.photos/200/200" width="100%" />
+            </Box>
+            <Box>
+              <Image src="https://picsum.photos/200/200" width="100%" />
+            </Box>
+            <Box>
+              <Image src="https://picsum.photos/200/200" width="100%" />
+            </Box>
+            <Box>
+              <Image src="https://picsum.photos/200/200" width="100%" />
+            </Box>
+            <Box>
+              <Image src="https://picsum.photos/200/200" width="100%" />
+            </Box>
+            <Box>
+              <Image src="https://picsum.photos/200/200" width="100%" />
+            </Box>
+            <Box>
+              <Image src="https://picsum.photos/200/200" width="100%" />
+            </Box>
+          </SimpleGrid>
         </GridItem>
 
         <GridItem w="100%" colSpan={{ base: 6, lg: 2 }}>
