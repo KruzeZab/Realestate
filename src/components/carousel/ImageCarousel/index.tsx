@@ -1,7 +1,37 @@
-import { Box } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import ImageGallery from "react-image-gallery";
+
 import "react-image-gallery/styles/css/image-gallery.css";
-import { LeftArrow, RightArrow } from "../NavButton";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+
+export const LeftArrow = ({ onClick }: any) => {
+  // onMove means if dragging or swiping in progress.
+  return (
+    <IconButton
+      size="sm"
+      isRound
+      aria-label="previous items carousel"
+      icon={<MdArrowBackIos />}
+      position="absolute"
+      onClick={onClick}
+    />
+  );
+};
+
+export const RightArrow = ({ onClick }: any) => {
+  // onMove means if dragging or swiping in progress.
+  return (
+    <IconButton
+      size="sm"
+      isRound
+      aria-label="next items carousel"
+      icon={<MdArrowForwardIos />}
+      position="absolute"
+      right="0"
+      onClick={onClick}
+    />
+  );
+};
 
 const images = [
   {
@@ -23,10 +53,10 @@ const ImageCarousel = () => {
     <ImageGallery
       items={images}
       useBrowserFullscreen={false}
+      showFullscreenButton={false}
       renderRightNav={(onClick, disabled) => (
         <Box
           position="absolute"
-          display={{ base: "none", md: "block" }}
           zIndex={1}
           top="40%"
           right="5px"
@@ -39,7 +69,6 @@ const ImageCarousel = () => {
       renderLeftNav={(onClick, disabled) => (
         <Box
           position="absolute"
-          display={{ base: "none", md: "block" }}
           zIndex={1}
           top="40%"
           left="5px"

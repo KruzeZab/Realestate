@@ -1,8 +1,36 @@
-import { Box } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import "react-multi-carousel/lib/styles.css";
+
 import Listing from "../../Listing";
-import { LeftArrow, RightArrow } from "../NavButton";
+
+export const LeftArrow = ({ onClick }: any) => {
+  // onMove means if dragging or swiping in progress.
+  return (
+    <IconButton
+      isRound
+      aria-label="previous items carousel"
+      icon={<MdArrowBackIos />}
+      position="absolute"
+      onClick={onClick}
+    />
+  );
+};
+
+export const RightArrow = ({ onClick }: any) => {
+  // onMove means if dragging or swiping in progress.
+  return (
+    <IconButton
+      isRound
+      aria-label="next items carousel"
+      icon={<MdArrowForwardIos />}
+      position="absolute"
+      right="0"
+      onClick={onClick}
+    />
+  );
+};
 
 const responsive = {
   superLargeDesktop: {
