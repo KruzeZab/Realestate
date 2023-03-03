@@ -19,7 +19,7 @@ interface ContactProps {
   icon: React.ReactNode;
 }
 
-const ContactAgent = ({ text, icon }: ContactProps) => {
+export const ContactAgent = ({ text, icon }: ContactProps) => {
   return (
     <HStack alignItems={"center"}>
       <Flex

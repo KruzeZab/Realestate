@@ -26,10 +26,11 @@ import ListingFeature from "./renders/ListingFeature";
 import ListingMap from "./renders/ListingMap";
 import RealtorInfo from "./renders/RealtorInfo";
 import ListingImages from "./renders/ListingImages";
+// import MessageModal from "./renders/MessageModal";
 
 const ListingDetailPage = () => {
   return (
-    <Container maxW="container.xl">
+    <Container maxW="container.xl" mb={8}>
       <Box pt={2}>
         <Text fontSize="sm">
           Presented by: &nbsp;
@@ -158,6 +159,7 @@ const ListingDetailPage = () => {
           <RealtorInfo />
         </GridItem>
       </Grid>
+      {/* <MessageModal /> */}
     </Container>
   );
 };
