@@ -5,7 +5,6 @@ import {
   Grid,
   GridItem,
   HStack,
-  Image,
   Link,
   SimpleGrid,
   Tag,
@@ -26,6 +25,7 @@ import ListingDescription from "./renders/ListingDescription";
 import ListingFeature from "./renders/ListingFeature";
 import ListingMap from "./renders/ListingMap";
 import RealtorInfo from "./renders/RealtorInfo";
+import ListingImages from "./renders/ListingImages";
 
 const ListingDetailPage = () => {
   return (
@@ -110,65 +110,48 @@ const ListingDetailPage = () => {
           <Box mb={4}>
             <Link color={"blue"}>Interested? Send a quotation today.</Link>
           </Box>
-          <Text mb={4}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perferendis quod dolorum tempore vero adipisci harum laboriosam. Sed
-            similique eligendi illum unde impedit in debitis voluptatibus, optio
-            sequi ad alias tempore! Vitae natus excepturi ullam in molestias
-            quidem error dolor asperiores neque sequi alias obcaecati velit sed,
-            voluptates rem eveniet, sit fugit et incidunt hic corporis sint
-            illum possimus. Illum, temporibus? Tempore aut officiis quibusdam,
-            placeat suscipit aperiam, ipsa necessitatibus obcaecati at similique
-            ea soluta itaque! Consequuntur aperiam unde corporis, velit ut id
-            voluptatem eveniet eius tenetur quis provident. Dolores, animi.
-          </Text>
-          <Text mb={4}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perferendis quod dolorum tempore vero adipisci harum laboriosam. Sed
-            similique eligendi illum unde impedit in debitis voluptatibus, optio
-            sequi ad alias tempore! Vitae natus excepturi ullam in molestias
-            quidem error dolor asperiores neque sequi alias obcaecati velit sed,
-            voluptates rem eveniet, sit fugit et incidunt hic corporis sint
-            illum possimus. Illum, temporibus? Tempore aut officiis quibusdam,
-            placeat suscipit aperiam, ipsa necessitatibus obcaecati at similique
-            ea soluta itaque! Consequuntur aperiam unde corporis, velit ut id
-            voluptatem eveniet eius tenetur quis provident. Dolores, animi.
-          </Text>
-          <Text mb={4}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perferendis quod dolorum tempore vero adipisci harum laboriosam. Sed
-            similique eligendi illum unde impedit in debitis voluptatibus, optio
-            sequi ad alias tempore! Vitae natus excepturi ullam in molestias
-            quidem error dolor asperiores neque sequi alias obcaecati velit sed,
-            voluptates rem eveniet, sit fugit et incidunt hic corporis sint
-            illum possimus. Illum, temporibus? Tempore aut officiis quibusdam,
-            placeat suscipit aperiam, ipsa necessitatibus obcaecati at similique
-            ea soluta itaque! Consequuntur aperiam unde corporis, velit ut id
-            voluptatem eveniet eius tenetur quis provident. Dolores, animi.
-          </Text>
-          <SimpleGrid minChildWidth={"200px"} spacing={5}>
-            <Box>
-              <Image src="https://picsum.photos/200/200" width="100%" />
-            </Box>
-            <Box>
-              <Image src="https://picsum.photos/200/200" width="100%" />
-            </Box>
-            <Box>
-              <Image src="https://picsum.photos/200/200" width="100%" />
-            </Box>
-            <Box>
-              <Image src="https://picsum.photos/200/200" width="100%" />
-            </Box>
-            <Box>
-              <Image src="https://picsum.photos/200/200" width="100%" />
-            </Box>
-            <Box>
-              <Image src="https://picsum.photos/200/200" width="100%" />
-            </Box>
-            <Box>
-              <Image src="https://picsum.photos/200/200" width="100%" />
-            </Box>
-          </SimpleGrid>
+          <Box>
+            <Text mb={4}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perferendis quod dolorum tempore vero adipisci harum laboriosam.
+              Sed similique eligendi illum unde impedit in debitis voluptatibus,
+              optio sequi ad alias tempore! Vitae natus excepturi ullam in
+              molestias quidem error dolor asperiores neque sequi alias
+              obcaecati velit sed, voluptates rem eveniet, sit fugit et incidunt
+              hic corporis sint illum possimus. Illum, temporibus? Tempore aut
+              officiis quibusdam, placeat suscipit aperiam, ipsa necessitatibus
+              obcaecati at similique ea soluta itaque! Consequuntur aperiam unde
+              corporis, velit ut id voluptatem eveniet eius tenetur quis
+              provident. Dolores, animi.
+            </Text>
+            <Text mb={4}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perferendis quod dolorum tempore vero adipisci harum laboriosam.
+              Sed similique eligendi illum unde impedit in debitis voluptatibus,
+              optio sequi ad alias tempore! Vitae natus excepturi ullam in
+              molestias quidem error dolor asperiores neque sequi alias
+              obcaecati velit sed, voluptates rem eveniet, sit fugit et incidunt
+              hic corporis sint illum possimus. Illum, temporibus? Tempore aut
+              officiis quibusdam, placeat suscipit aperiam, ipsa necessitatibus
+              obcaecati at similique ea soluta itaque! Consequuntur aperiam unde
+              corporis, velit ut id voluptatem eveniet eius tenetur quis
+              provident. Dolores, animi.
+            </Text>
+            <Text mb={4}>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Perferendis quod dolorum tempore vero adipisci harum laboriosam.
+              Sed similique eligendi illum unde impedit in debitis voluptatibus,
+              optio sequi ad alias tempore! Vitae natus excepturi ullam in
+              molestias quidem error dolor asperiores neque sequi alias
+              obcaecati velit sed, voluptates rem eveniet, sit fugit et incidunt
+              hic corporis sint illum possimus. Illum, temporibus? Tempore aut
+              officiis quibusdam, placeat suscipit aperiam, ipsa necessitatibus
+              obcaecati at similique ea soluta itaque! Consequuntur aperiam unde
+              corporis, velit ut id voluptatem eveniet eius tenetur quis
+              provident. Dolores, animi.
+            </Text>
+          </Box>
+          <ListingImages />
         </GridItem>
 
         <GridItem w="100%" colSpan={{ base: 6, lg: 2 }}>
